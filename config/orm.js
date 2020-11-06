@@ -2,11 +2,13 @@ var connection = require("./connection.js");
 
 function printQuestionMarks(num) {
     var arr = [];
+  
     for (var i = 0; i < num; i++) {
-        arr.push("?");
+      arr.push("?");
     }
+  
     return arr.toString();
-}
+  }
 
 function objToSql(ob) {
     var arr = [];
@@ -28,7 +30,6 @@ var orm = {
         var queryString = "SELECT * FROM " + table + " ;"
         connection.query(queryString, (err, res) => {
             if (err) throw err;
-            // console.log(res);
             cb(res);
         });
     },
@@ -42,12 +43,14 @@ var orm = {
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
-
-        connection.query = (queryString, vals, function (err, result) {
+        
+        console.log(queryString)
+        
+        connection.query = (queryString, vals, function (err, res) {
             if (err) {
                 throw err;
             }
-            cb(result);
+            cb(res);
         });
     },
 
@@ -70,3 +73,6 @@ var orm = {
 };
 
 module.exports = orm;
+
+
+
