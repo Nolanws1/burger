@@ -3,10 +3,8 @@ h1 {
   font-size: 40px;
 }
 
-p, h2 {
-  text-align: center;
+h2 {
   font-size: xx-large;
-  -webkit-text-stroke: 1px black;
   padding: 5px;
 }
 
@@ -18,17 +16,15 @@ body {
   font-size: xx-large;
 }
 
-li {
-    padding: 5px;
-    margin: 5px;
-    -webkit-text-stroke: 1px black;
-    font-size: xx-large;
+.search {
+  width: 75%;
+  height: 40px;;
 }
-
 .best, .eaten {
     border: solid;
     border-color: #f3dc09;
-    border-radius: 2px;
+    border-width: 5px;
+    border-radius: 8px;
     width: 49%;
     float: left;
     height: 1000px;
@@ -38,6 +34,7 @@ li {
     background-color: #f3dc09;
     color: white;
     font-family: 'Alfa Slab One', cursive;
+    font-size: large;
     border: solid;
     border-radius: 15%;
     border-color: black

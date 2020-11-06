@@ -2,23 +2,24 @@
 
 <div class="flexbox_card">
   <form class="create-form form">
-    <h2>Add a Burger...</h2>
+    <h1>add a burger...</h1>
     <div class="form-group">
       <label for="ca"></label>
-      <input type="text" id="ca" name="name">
+      <input class="search" type="text" id="ca" name="name">
       <button class="button" type="submit">Add</button>
     </div>
   </form>
 </div>
 
 <div class="best">
-  <h2>Your burgers:</h2>
+  <h1>your burgers:</h1>
   <ul>
     {{#each burgers}}
     {{#unless devoured}}
-    <li>
+    <li><h2>
       {{burger_name}}
       <button class="button change-toEaten" data-id="{{id}}"><i class="fas fa-utensils"></i></button>
+      </h2>
     </li>
      {{/unless}}
     {{/each}}
@@ -26,7 +27,7 @@
 
 
 <div class="eaten">
-  <h2>All gone!!</h2>
+  <h1>all gone!!</h1>
 <ul class="all_gone">
       {{#each burgers}}
       {{#if devoured}}
