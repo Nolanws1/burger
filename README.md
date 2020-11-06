@@ -9,7 +9,7 @@
 
 Download the <strong>Project Folder</strong>.
 Run <strong>npm install</strong> in the terminal.
-Run <strong>Node Server.js</strong>
+Run <strong>Node Server.js</strong>.
 Open <strong>Localhost:8080</strong> in the browser.
 
 #### Made By
