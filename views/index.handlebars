@@ -12,14 +12,28 @@
 </div>
 
 <div class="best">
-  <h2>Your burgers:<i class="fas fa-utensils"></i></h2>
+  <h2>Your burgers:</h2>
   <ul>
     {{#each burgers}}
+    {{#unless devoured}}
     <li>
       {{burger_name}}
+      <button class="button change-toEaten" data-id="{{id}}"><i class="fas fa-utensils"></i></button>
     </li>
+     {{/unless}}
     {{/each}}
-  </ul>
 </div>
+
+
 <div class="eaten">
+  <h2>All gone!!</h2>
+<ul class="all_gone">
+      {{#each burgers}}
+      {{#if devoured}}
+      <li>
+      {{burger_name}}
+      {{/if}}
+      </li>
+      {{/each}}
+    </ul>
 </div>
