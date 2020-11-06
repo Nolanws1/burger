@@ -1,24 +1,25 @@
-<h1>Burgers</h1>
+<h1><i class="fas fa-hamburger"></i> Burgers <i class="fas fa-hamburger"></i></h1>
 
-<p>These are all the BEST burgers:</p>
-<ul>
-  {{#each burgers}}
-  <li>
-	{{burger_name}}
-</li>
-  {{/each}}
-</ul>
+<div class="flexbox_card">
+  <form class="create-form form">
+    <h2>Add a Burger...</h2>
+    <div class="form-group">
+      <label for="ca"></label>
+      <input type="text" id="ca" name="name">
+      <button class="button" type="submit">Add</button>
+    </div>
+  </form>
+</div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-
-  <button type="submit">Add Burger</button>
-</form>
-
-
+<div class="best">
+  <h2>Your burgers:<i class="fas fa-utensils"></i></h2>
+  <ul>
+    {{#each burgers}}
+    <li>
+      {{burger_name}}
+    </li>
+    {{/each}}
+  </ul>
+</div>
+<div class="eaten">
+</div>
