@@ -4,7 +4,7 @@
   "description": "Homework Week 12",
   "main": "server.js",
   "scripts": {
-    "test": "N/A"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
